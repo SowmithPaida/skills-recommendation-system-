@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SkillPath AI</h1>
+            <p>Discover your next learning milestone</p>
+        </header>
+
+        <main class="card">
+            <!-- Input Form Section -->
+            <section class="form-group">
+                <label for="current-skills">Your Current Skills</label>
+                <input type="text" id="current-skills" placeholder="e.g., HTML, CSS, Python (comma separated)">
+            </section>
+
+            <section class="form-group">
+                <label for="interest-domain">Target Interest Area</label>
+                <select id="interest-domain">
+                    <option value="" disabled selected>Select a domain...</option>
+                    <option value="frontend">Frontend Web Development</option>
+                    <option value="backend">Backend Web Development</option>
+                    <option value="datascience">Data Science & Analytics</option>
+                    <option value="ai">Artificial Intelligence & ML</option>
+                    <option value="design">UI/UX Design</option>
+                </select>
+            </section>
+
+            <div class="button-group">
+                <button id="btn-recommend" class="btn btn-primary">Get Recommendations</button>
+                <button id="btn-reset" class="btn btn-secondary">Reset</button>
+            </div>
+
+            <!-- Output Results Section -->
+            <section id="results-section" class="results-hidden">
+                <hr>
+                <h2>Your Personalized Learning Path</h2>
+                
+                <div class="path-container" id="learning-path">
+                    <!-- JavaScript will inject step cards here -->
+                </div>
+
+                <div class="next-steps" id="next-steps-list">
+                    <!-- JavaScript will inject specific next recommendations here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
